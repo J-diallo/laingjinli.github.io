@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>你的名字 - 个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            line-height: 1.6;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: #ffffffcc;
+            backdrop-filter: blur(6px);
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        header .logo {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p.subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .hero .btn-group a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 8px;
+            border-radius: 999px;
+            border: 1px solid #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .hero .btn-primary {
+            background: #333;
+            color: #fff;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 16px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: #eee;
+            font-size: 12px;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .project-meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+            header {
+                padding: 8px 16px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">梁锦力 HERE!</div>
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>你好，我是梁锦力 👋</h1>
+    <p class="subtitle">数据分析 / Python / 爬虫 / BI 可视化</p>
+    <div class="btn-group">
+        <a href="#projects" class="btn-primary">查看我的项目</a>
+        <a href="#contact">联系我</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <section id="about">
+        <h2>关于我</h2>
+        <div class="card">
+            
+            <p>
+                我是一名对数据分析和自动化充满兴趣的学生/职场人，熟悉 Python、SQL、Excel 及基础机器学习，
+                做过电商用户行为分析、基金热度榜分析、爬虫项目等，正在寻找/提升数据分析相关机会。
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>技能</h2>
+        <div class="card">
+            <p><strong>编程与数据分析：</strong></p>
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Stata</span>
+            <span class="tag">SQL / MySQL</span>
+
+            <p style="margin-top:12px;"><strong>可视化与 BI：</strong></p>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">QuickBI</span>
+            <span class="tag">Excel</span>
+
+            <p style="margin-top:12px;"><strong>其他：</strong></p>
+            <span class="tag">爬虫（Requests / Playwright）</span>
+            <span class="tag">Linux / Shell</span>
+            <span class="tag">Git</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>项目</h2>
+
+        <div class="card">
+            <div class="project-title">电商用户行为数据分析</div>
+            <div class="project-meta">Python · Pandas · RFM 分析 · 可视化</div>
+            <p>
+                基于某电商用户行为数据集，完成数据清洗、构建 RFM 模型，对用户进行分群，
+                分析不同用户群体的价值与行为特征，并输出可视化图表和运营建议。
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="project-title">基金热度榜数据看板</div>
+            <div class="project-meta">MySQL · Python · QuickBI · 爬虫</div>
+            <p>
+                编写爬虫抓取多渠道基金热度及排名数据，使用 MySQL 进行清洗与汇总，
+                在 QuickBI 中搭建可视化看板，展示不同时间窗口内的基金热度变化与榜单走势。
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="project-title">舆情监测与文本分析</div>
+            <div class="project-meta">Python · 文本清洗 · 词云 · 主题分析</div>
+            <p>
+                对网络评论数据进行清洗与分词，构建关键词词频统计和词云图，
+                初步探查用户情绪与关注点，为后续舆情分析与运营策略提供支持。
+            </p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>教育 / 经历</h2>
+        <div class="card">
+            <p><strong>教育经历：</strong></p>
+            <p>GDUFS · 应用统计 / 经济统计学（可按实际改）</p>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>联系我</h2>
+        <div class="card">
+            <p>如果你对我的项目感兴趣，欢迎联系我：</p>
+            <p>📧 邮箱：<a href="mailto:youremail@example.com">jackdiallo121300@gmail.com</a></p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © <span id="year"></span> 梁锦力 · Personal Site
+</footer>
+
+<script>
+    // 自动填充当前年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
